@@ -1,0 +1,6 @@
+<!-- <movable-area>
+  <movable-view>你好</movable-view>
+</movable-area> -->
+<view class='rich-text'>
+  <rich-text nodes="{{textString}}"></rich-text>
+</view>

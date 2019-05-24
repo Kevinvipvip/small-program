@@ -1,0 +1,4 @@
+<view class='sh-box' bindtap='openShanHaiWenHua'>
+  <image class='logo' src='/images/black-logo.png'></image>
+  <text class='tip'>提供技术支持</text>
+</view>

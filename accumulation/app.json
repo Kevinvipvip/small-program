@@ -1,0 +1,45 @@
+{
+	"pages": [
+		"pages/accumulation/accumulation",
+		"pages/index/index",
+		"pages/tab/tab",
+		"pages/publish-house/publish-house",
+		"pages/mine/mine",
+		"pages/test/test"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#333333",
+		"navigationBarTitleText": "首页",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"color": "#ffffff",
+		"selectedColor": "#d81e06",
+		"backgroundColor": "#000000",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "/images/index.png",
+				"selectedIconPath": "/images/index-selected.png"
+			},
+			{
+				"pagePath": "pages/accumulation/accumulation",
+				"text": "积累",
+				"iconPath": "/images/accumulation.png",
+				"selectedIconPath": "/images/accumulation-selected.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "我的",
+				"iconPath": "/images/mine.png",
+				"selectedIconPath": "/images/mine-selected.png"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json",
+	"navigateToMiniProgramAppIdList": [
+		"wx50f030c7f4a897ff"
+	]
+}

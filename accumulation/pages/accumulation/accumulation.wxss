@@ -1,0 +1,13 @@
+.link-box {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.link-box navigator {
+  background: #ccc;
+  padding: 10rpx 80rpx;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+}

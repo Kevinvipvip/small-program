@@ -1,0 +1,36 @@
+<view class='tab-switch'>
+  <view class='tab-box'>
+    <view class='tab-detail-box {{flagId == 0?"on":""}}' data-id='0' bindtap='itemClick'>
+      <text class='iconfont icon-sort'></text>
+    </view>
+    <view class='tab-array-box'>
+      <block wx:for="{{tabArray}}" wx:for-index='index' wx:key='index'>
+        <view class='tab-item {{flagId == item.id?"on":""}}' data-id='{{item.id}}' bindtap='itemClick'>
+          <text>{{item.title}}</text>
+          <text class='iconfont icon-xia my-iconfonts'></text>
+        </view>
+      </block>
+    </view>
+
+  </view>
+
+  <view class='tab-down-box' wx:if="{{showTabDown}}">
+    <block wx:for="{{tabArray}}" wx:for-index='index' wx:key='index'>
+      <view class='switch-box' wx:if='{{flagId == item.id}}'>
+        <view class='region'>
+          <view class='region-left'>
+            <block wx:for='{{item.region.list1}}' wx:for-index='index' wx:key='index'>
+              <text>{{item.name}}</text>
+            </block>
+          </view>
+          <view class='region-right'>
+            <block wx:for='{{item.region.list2}}' wx:for-index='index' wx:key='index'>
+              <text>{{item.name}}</text>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class='switch-box' wx:if='{{flagId == 0}}'>排序</view>
+  </view>
+</view>

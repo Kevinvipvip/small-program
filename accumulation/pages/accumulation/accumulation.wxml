@@ -1,0 +1,5 @@
+<view class='link-box'>
+  <block wx:for='{{linkArray}}' wx:for-index='index' wx:key='imndex'>
+    <navigator url='{{item.link}}'>{{item.name}}</navigator>
+  </block>
+</view>

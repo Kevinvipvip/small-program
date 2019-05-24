@@ -1,0 +1,23 @@
+
+.sh-box {
+	background: #e5e5e5;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+	padding: 20rpx 0;
+  z-index: 9;
+}
+
+.sh-box image{
+width:140rpx;
+height:45rpx;
+margin:0 auto 5rpx;
+display:block;
+}
+.sh-box .tip{
+	display: block;
+	text-align: center;
+	font-size: 24rpx;
+	color: #999;
+}

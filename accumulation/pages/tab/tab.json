@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "选项卡",
+	"usingComponents": {
+		"my-tab": "/components/tab-switch/tab-switch"
+	}
+}

@@ -1,0 +1,173 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='publish-box'>
+
+    <view class='publish'>
+
+      <view class='publish-cont'>
+
+        <view class='title'>发布帖子类型</view>
+
+        <view class='type-box'>
+          <checkbox-group name='checkbox' class='type-box'>
+            <block wx:for='{{invitation}}' wx:for-index='index' wx:key='index'>
+              <label class='{{item.isChecked?"type-style":""}}'>
+                <checkbox data-id='{{item.id}}' bindtap='checkBoxClick' value='{{item.title}}' /> {{item.title}}
+              </label>
+            </block>
+          </checkbox-group>
+        </view>
+
+      </view>
+
+      <view class='publish-cont'>
+
+        <view class='title'>租赁类型</view>
+
+        <view class='type-box'>
+          <radio-group name='radio' bindchange='radioClick' class='type-box'>
+            <block wx:for='{{lease}}' wx:for-index='index' wx:key='index'>
+              <label class='{{item.isChecked?"type-style":""}}'>
+                <radio data-id='{{item.id}}' value='{{item.id}}' /> {{item.title}}
+              </label>
+            </block>
+          </radio-group>
+        </view>
+
+      </view>
+
+      <view class='publish-cont'>
+        <view class='title'>房源图片</view>
+        <text class='tips'>(至少上传3张图片，禁止上传含有第三方水印的照片)</text>
+        <view class='up-images-box'>
+          <block wx:for='{{houseImg}}' wx:for-index='index' wx:key='index'>
+            <view class='up-image-cont' style='height:{{height}}'>
+              <image src='{{item.path}}'></image>
+            </view>
+          </block>
+          <view class='up-image-cont' style='height:{{height}}' bindtap='upLoadImage'>
+            <view class='up-img'>
+              <image src='/images/add-icon.png' mode='widthFix'></image>
+            </view>
+            <text>上传照片最多9张</text>
+          </view>
+
+        </view>
+      </view>
+
+      <view class='publish-cont'>
+        <view class='title'>房源详情</view>
+
+        <view class='house-detail'>
+          <view class='house-detail-item'>
+            <text class='label-tips'>位置：</text>
+            <view class='house-right'>
+              <label>
+                <input type='text' name='position' placeholder='请选择房源所在小区' value='{{position}}' disabled />
+              </label>
+              <view class='icon-box'>
+                <image src='/images/position-icon.png' mode='widthFix'></image>
+              </view>
+            </view>
+          </view>
+
+          <view class='house-detail-item'>
+            <text class='label-tips'>房屋户型：</text>
+            <view class='house-right'>
+              <picker style='width:520rpx;' mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" name='apartment' value="{{multiIndex}}" range="{{multiArray}}">
+                <view class="picker">{{multiArray[0][multiIndex[0]]}}{{multiArray[1][multiIndex[1]]}}{{multiArray[2][multiIndex[2]]}}</view>
+              </picker>
+            </view>
+          </view>
+
+          <view class='house-detail-item'>
+            <text class='label-tips'>房屋面积：</text>
+            <view class='house-right'>
+              <label style='width:480rpx;'>
+                <input type='text' name='houseArea' value='{{houseArea}}' />
+              </label>
+              <view class='icon-box' style='margin-left:10rpx;'>m
+                <text class='sup'>2</text>
+              </view>
+            </view>
+          </view>
+
+          <view class='house-detail-item'>
+            <text class='label-tips'>租金要求：</text>
+            <view class='house-right'>
+              <label style='width:455rpx;'>
+                <input type='text' name='requireRent' value='{{requireRent}}' />
+              </label>
+              <view class='icon-box' style='margin-left:10rpx;width:75rpx;'>元/月</view>
+            </view>
+          </view>
+
+          <view class='house-detail-item'>
+            <text class='label-tips'>租客性别要求：</text>
+            <view class='house-right'>
+              <picker style='width:450rpx;' bindchange="bindSexChange" name='requireSex' value="{{sexIndex}}" range="{{requireSex}}">
+                <view class="picker">
+                  {{requireSex[sexIndex]}}
+                </view>
+              </picker>
+            </view>
+          </view>
+
+          <view class='house-detail-item'>
+            <text class='label-tips'>预计入住时间：</text>
+            <view class='house-right'>
+              <picker style='width:450rpx;' mode="date" name='date' value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+                <view class="picker" style='color:{{changeColor?"":"#999999"}}'>
+                  {{date}}
+                </view>
+              </picker>
+            </view>
+          </view>
+
+          <view class='house-detail-item house-describe-item'>
+            <text class='label-tips'>房源描述：</text>
+            <view class='house-describe'>
+              <view class='ipt-textarea'>
+                <textarea placeholder='为提高您的出房速度，请描述房源核心优势，如近地铁站；以及预约对象、时长、付款方式等。' bindinput='getTextareaLength' maxlength='800' name='houseDescribe'></textarea>
+              </view>
+              <text>{{length}}/800</text>
+            </view>
+          </view>
+        </view>
+
+      </view>
+
+      <view class='publish-cont'>
+        <view class='title'>联系方式</view>
+        <view class='tel-box'>
+          <input type='number' placeholder='请输入联系电话' name='telephone' maxlength='11'></input>
+        </view>
+        <text class='tel-tips'>为了保护您的隐私，您的号码将会被以虚拟号码的形式被拨打。</text>
+      </view>
+
+      <view class='publish-cont'>
+        <view class='title prove-title'>房源证明材料</view>
+        <view class='up-images-box'>
+          <block wx:for='{{proveImg}}' wx:for-index='index' wx:key='index'>
+            <view class='up-image-cont' style='height:{{height}}'>
+              <image src='{{item.path}}'></image>
+            </view>
+          </block>
+          <view class='up-image-cont' style='height:{{height}}' bindtap='upLoadProveImage'>
+            <view class='up-img'>
+              <image src='/images/add-icon.png' mode='widthFix'></image>
+            </view>
+            <text>可上传房产证照片</text>
+          </view>
+
+        </view>
+        <text class='tel-tips'>用户主动上传的房源证明材料，仅用于平台审核，不对外显示，未经用户允许不对外提供。</text>
+      </view>
+
+    </view>
+
+  </view>
+  <view class="btn-form">
+    <button class='btn-submit' formType="submit">提交</button>
+    <!-- <button formType="reset">Reset</button> -->
+  </view>
+</form>

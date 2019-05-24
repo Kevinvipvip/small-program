@@ -1,0 +1,64 @@
+@import "iconfont.wxss";
+
+.tab-switch {
+  position: relative;
+}
+
+.tab-box {
+  overflow: hidden;
+  height: 80rpx;
+  background: #f8f8ff;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.tab-detail-box {
+  float: right;
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 17rpx 20rpx;
+}
+
+.tab-detail-box text {
+  color: #333;
+}
+
+.tab-array-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.tab-item {
+  height: 100%;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.tab-item .my-iconfonts {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  color: #999;
+  font-size: 14rpx;
+}
+
+.on, .on .my-iconfonts, .on text {
+  color: #084bfa;
+}
+
+/* 点击选项卡显示的下拉内容样式 */
+
+.tab-down-box {
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  right: 0;
+  height: auto;
+}

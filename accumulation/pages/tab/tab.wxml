@@ -1,0 +1,3 @@
+<view class='tab-box'>
+  <my-tab tabArray='{{tabArray}}'></my-tab>
+</view>

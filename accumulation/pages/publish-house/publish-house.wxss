@@ -1,0 +1,230 @@
+.publish {
+  margin: 0 30rpx 200rpx;
+  overflow: hidden;
+}
+
+.publish-cont {
+  overflow: hidden;
+  margin: 20rpx 0;
+}
+
+.title {
+  margin-top: 30rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.tips {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.type-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.type-box label {
+  font-size: 30rpx;
+  display: block;
+  padding: 10rpx 40rpx;
+  margin: 30rpx 30rpx 0 0;
+  background: rgb(247, 247, 247);
+  position: relative;
+  z-index: 1;
+}
+
+.type-box label checkBox, .type-box label radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  opacity: 0;
+}
+
+.type-box .type-style {
+  background: #e4ebfd;
+  color: #084bfa;
+}
+
+.up-images-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.up-image-cont {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  background: rgb(247, 247, 247);
+  border-radius: 10rpx;
+	overflow: hidden;
+}
+
+.up-image-cont image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.up-img {
+  width: 30%;
+  height: 30%;
+}
+
+.up-image-cont .up-img image {
+  width: 100%;
+  display: block;
+}
+
+.up-image-cont text {
+  display: block;
+  width: 50%;
+  text-align: center;
+  color: #999;
+  font-size: 22rpx;
+}
+
+.house-detail-item {
+  height: 90rpx;
+  line-height: 90rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.house-describe-item {
+  display: block;
+  border: none;
+  height: auto;
+  line-height: unset;
+}
+
+.label-tips {
+  line-height: 90rpx;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.house-right {
+  font-size: 32rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.house-right label {
+  display: block;
+  color: #333;
+  width: 540rpx;
+}
+
+.house-right label input {
+  width: 100%;
+  display: block;
+}
+
+.icon-box {
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.sup {
+  font-size: 20rpx;
+  vertical-align: text-top;
+}
+
+.house-describe {
+  position: relative;
+  border: 1rpx solid #e5e5e5;
+}
+
+.ipt-textarea {
+  margin: 20rpx 20rpx 10rpx;
+  font-size: 30rpx;
+  height: 200rpx;
+}
+
+.ipt-textarea textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.house-describe text {
+  font-size: 30rpx;
+  display: block;
+  text-align: right;
+  margin: 0 20rpx 20rpx;
+  color: #999;
+}
+
+.tel-box {
+  border: 1rpx solid #e5e5e5;
+  margin: 20rpx 0 0;
+  height: 70rpx;
+}
+
+.tel-box input {
+  line-height: 70rpx;
+  display: block;
+  height: 100%;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+}
+
+.tel-tips {
+  font-size: 22rpx;
+  color: #999;
+  margin-top: 20rpx;
+  text-align: justify;
+  display: block;
+}
+
+.prove-title {
+  color: #999;
+  margin-top: 50rpx;
+}
+
+.btn-form {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background: #fff;
+  overflow: hidden;
+}
+
+.btn-submit {
+  margin: 30rpx;
+  background: #377bf5;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+}
