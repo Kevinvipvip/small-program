@@ -1,23 +1,152 @@
+.mine-title-box {
+  border-bottom: 5rpx solid #70ac2e;
+}
 
-.sh-box {
-	background: #e5e5e5;
-  position: fixed;
-  bottom: 0;
+.mine-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3rpx solid #355146;
+  padding: 0 10rpx;
+}
+
+.mine-title-left {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mine-title-right {
+  height: 50rpx;
+  font-size: 30rpx;
+  color: #355146;
+  font-weight: bold;
+  margin: 20rpx;
+  border-bottom: 1rpx solid #70ac2e;
+  position: relative;
+}
+
+.mine-title-right::before {
+  content: "";
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5rpx;
+  left: -10rpx;
+  border: 1rpx solid #70ac2e;
+}
+
+.mine-title-right::after {
+  content: "";
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5rpx;
+  right: -10rpx;
+  border: 1rpx solid #70ac2e;
+}
+
+.hexagon {
+  width: 80rpx;
+  height: 45rpx;
+  font-weight: bold;
+  background: #70ac2e;
+  font-size: 40rpx;
+  line-height: 45rpx;
+  color: #355146;
+  text-align: center;
+  position: relative;
+  margin: 30rpx 10rpx;
+}
+
+.hexagon:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -20rpx;
   left: 0;
-  right: 0;
-	padding: 20rpx 0;
-  z-index: 9;
+  border-left: 40rpx solid transparent;
+  border-right: 40rpx solid transparent;
+  border-bottom: 20rpx solid #70ac2e;
 }
 
-.sh-box image{
-width:140rpx;
-height:45rpx;
-margin:0 auto 5rpx;
-display:block;
+.hexagon:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -20rpx;
+  left: 0;
+  border-left: 40rpx solid transparent;
+  border-right: 40rpx solid transparent;
+  border-top: 20rpx solid #70ac2e;
 }
-.sh-box .tip{
-	display: block;
-	text-align: center;
-	font-size: 24rpx;
-	color: #999;
+
+.content-box {
+  margin: 0 20rpx;
+  border-left: 1rpx solid #70ac2e;
+  overflow: hidden;
+}
+
+.content-title {
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.content-title .tip-name {
+  display: block;
+  height: 60rpx;
+  width: 170rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+  color: #fff;
+  background: #355146;
+  position: relative;
+}
+
+.content-title .tip-name::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -30rpx;
+  border-left: 30rpx solid #355146;
+  border-top: 30rpx solid transparent;
+  border-bottom: 30rpx solid transparent;
+}
+
+.content-title .tip-line {
+  height: 5rpx;
+  background: #355146;
+  display: block;
+  width: 100%;
+}
+
+.content-message {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.content-message text {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  display: block;
+}
+
+.content-message .message-label {
+  margin-left: 30rpx;
+  width: 130rpx;
+}
+
+.content-message .message-label text {
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.content-message .message-cont {
+  margin-left: 30rpx;
 }

@@ -1,4 +1,83 @@
-<view class='sh-box' bindtap='openShanHaiWenHua'>
-  <image class='logo' src='/images/black-logo.png'></image>
-  <text class='tip'>提供技术支持</text>
+<view class='mine-title-box'>
+    <view class='mine-title'>
+        <view class='mine-title-left'>
+            <view class='hexagon'>个</view>
+            <view class='hexagon'>人</view>
+            <view class='hexagon'>简</view>
+            <view class='hexagon'>历</view>
+        </view>
+        <view class='mine-title-right'>
+            职位：WEB前端开发
+        </view>
+    </view>
+</view>
+
+<view class='content-box'>
+    <view class='content-title'>
+        <text class='tip-name'>基本信息</text>
+        <text class='tip-line'></text>
+    </view>
+    <view class='content-message'>
+        <view class='message-label'>
+            <text>姓名:</text>
+            <text>出生年月:</text>
+            <text>民族:</text>
+            <text>政治面貌:</text>
+            <text>联系电话:</text>
+            <text>邮箱:</text>
+            <text>现居地址:</text>
+        </view>
+        <view class='message-cont'>
+            <text>甘荣健</text>
+            <text>1996.02.06</text>
+            <text>汉</text>
+            <text>共青团员</text>
+            <text>18776554629</text>
+            <text>ganrongjian@126.com</text>
+            <text>天津市河西区联合里</text>
+        </view>
+    </view>
+    <view class='content-title'>
+        <text class='tip-name'>教育背景</text>
+        <text class='tip-line'></text>
+    </view>
+    <view class='content-message'>
+        <view class='message-label'>
+            <text>学校名称:</text>
+            <text>学历:</text>
+            <text>专业:</text>
+            <text>在校时间:</text>
+        </view>
+        <view class='message-cont'>
+            <text>天津理工大学中环信息学院</text>
+            <text>本科</text>
+            <text>计算机科学与技术</text>
+            <text>2014.09.01-2018.06.30</text>
+        </view>
+    </view>
+
+    <view class='content-title'>
+        <text class='tip-name'>实习经历</text>
+        <text class='tip-line'></text>
+    </view>
+    <view class='content-message'>
+        <view class='message-label'>
+            <text>公司名称:</text>
+            <text>实习岗位:</text>
+            <text>实习时间:</text>
+            <text>工作内容:</text>
+        </view>
+        <view class='message-cont'>
+            <text>盘古科技有限公司</text>
+            <text>前端开发</text>
+            <text>2018.05.10-2018.11.01</text>
+            <text>根据上司安排进行网页制作</text>
+        </view>
+    </view>
+
+    <view class='content-title'>
+        <text class='tip-name'>项目经验</text>
+        <text class='tip-line'></text>
+    </view>
+
 </view>
