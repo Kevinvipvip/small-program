@@ -57,27 +57,31 @@
     </view>
 
     <view class='content-title'>
-        <text class='tip-name'>实习经历</text>
+        <text class='tip-name'>工作经历</text>
         <text class='tip-line'></text>
     </view>
     <view class='content-message'>
         <view class='message-label'>
             <text>公司名称:</text>
-            <text>实习岗位:</text>
-            <text>实习时间:</text>
-            <text>工作内容:</text>
+            <text>工作职位:</text>
+            <text>工作时间:</text>
         </view>
         <view class='message-cont'>
             <text>盘古科技有限公司</text>
             <text>前端开发</text>
             <text>2018.05.10-2018.11.01</text>
-            <text>根据上司安排进行网页制作</text>
         </view>
     </view>
-
-    <view class='content-title'>
-        <text class='tip-name'>项目经验</text>
-        <text class='tip-line'></text>
+    <view class='content-message'>
+        <view class='message-label'>
+            <text>公司名称:</text>
+            <text>工作职位:</text>
+            <text>工作时间:</text>
+        </view>
+        <view class='message-cont'>
+            <text>山海文化有限公司</text>
+            <text>前端开发</text>
+            <text>2018.12.12至今</text>
+        </view>
     </view>
-
 </view>
