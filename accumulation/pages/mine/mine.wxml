@@ -60,7 +60,7 @@
         <text class='tip-name'>工作经历</text>
         <text class='tip-line'></text>
     </view>
-    <view class='content-message'>
+    <view class='content-message works'>
         <view class='message-label'>
             <text>公司名称:</text>
             <text>工作职位:</text>
@@ -72,7 +72,7 @@
             <text>2018.05.10-2018.11.01</text>
         </view>
     </view>
-    <view class='content-message'>
+    <view class='content-message works'>
         <view class='message-label'>
             <text>公司名称:</text>
             <text>工作职位:</text>

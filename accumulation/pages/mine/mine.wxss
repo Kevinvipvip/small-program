@@ -131,6 +131,10 @@
   justify-content: flex-start;
 }
 
+.works {
+  margin-bottom: 50rpx;
+}
+
 .content-message text {
   font-size: 28rpx;
   line-height: 50rpx;
