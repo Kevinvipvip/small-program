@@ -14,7 +14,7 @@
 
 <view class='content-box'>
     <view class='content-title'>
-        <text class='tip-name'>基本信息</text>
+        <view class='tip-name'>基本信息</view>
         <text class='tip-line'></text>
     </view>
     <view class='content-message'>
@@ -82,6 +82,33 @@
             <text>山海文化有限公司</text>
             <text>前端开发</text>
             <text>2018.12.12至今</text>
+        </view>
+    </view>
+
+    <view class='content-title'>
+        <text class='tip-name'>专业技能</text>
+        <text class='tip-line'></text>
+    </view>
+
+    <view class='content-message works'>
+        <view class='message-cont'>
+            <text>1、熟悉html+css进行网站页面设计制作</text>
+            <text>2、熟悉javascript脚本语言、掌握使用jquery制作页面简单效果的方法</text>
+            <text>3、熟悉使用swiper、animate.css、百度地图等脚本开发插件</text>
+            <text>4、熟悉使用word、excel及其他office系列办公软件</text>
+            <text>5、了解vue.js和jquery中ajax的使用方法</text>
+            <text>6、拥有良好的代码规范，对于移动端的适配有简单的了解</text>
+        </view>
+    </view>
+
+    <view class='content-title'>
+        <text class='tip-name'>自我评价</text>
+        <text class='tip-line'></text>
+    </view>
+
+    <view class='content-message works'>
+        <view class='message-cont'>
+            <text style="text-indent: 2em;">本人具有较强的学习能力，工作认真负责，有责任心和团结意识，做事细心、踏实，能迅速的适应各种环境、适应较大的工作压力，严格按照公司安排进行工作，具备很强的学习能力。</text>
         </view>
     </view>
 </view>

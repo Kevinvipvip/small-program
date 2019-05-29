@@ -96,7 +96,7 @@
 }
 
 .content-title .tip-name {
-  display: block;
+  /* display: block; */
   height: 60rpx;
   width: 170rpx;
   text-align: center;
@@ -154,3 +154,4 @@
 .content-message .message-cont {
   margin-left: 30rpx;
 }
+
