@@ -1,0 +1,15 @@
+<view class="upload-img">
+  <block wx:if="{{preview.length > 0}}" wx:for="{{preview}}" wx:for-index='index' wx:key='index'>
+    <view class="preview-box" id="pre_box" style="height: {{my_heigth}}px">
+      <view class="preview-cont" id="pre_cont" style="height: {{my_s_heigth}}px">
+        <image src='{{item}}' mode='aspectFill'></image>
+      </view>
+    </view>
+  </block>
+  <view class="preview-box" wx:if="{{preview.length < 9}}" id="pre_box" style="height:{{my_heigth}}px">
+    <view bindtap="uploading_image" class="preview-cont" id="pre_cont" style="height:{{my_s_heigth}}px">
+      <text class="iconfont icon-jiahao"></text>
+    </view>
+  </view>
+</view>
+<canvas canvas-id='attendCanvasId' class='myCanvas'></canvas>

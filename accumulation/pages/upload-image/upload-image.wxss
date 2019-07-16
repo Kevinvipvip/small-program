@@ -1,0 +1,31 @@
+.upload-img {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 30rpx;
+}
+
+.preview-box {
+    width: 33.33%;
+}
+
+.preview-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rpx;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+
+.preview-cont image {
+    background-color: #f2f2f2;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+.preview-cont text {
+    font-size: 80rpx;
+}
