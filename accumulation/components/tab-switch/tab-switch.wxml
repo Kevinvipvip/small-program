@@ -1,7 +1,7 @@
 <view class='tab-switch'>
   <view class='tab-box'>
     <view class='tab-detail-box {{flagId == 0?"on":""}}' data-id='0' bindtap='itemClick'>
-      <text class='iconfont icon-sort'></text>
+      <text class='iconfont icon-shangxiayidong'></text>
     </view>
     <view class='tab-array-box'>
       <block wx:for="{{tabArray}}" wx:for-index='index' wx:key='index'>

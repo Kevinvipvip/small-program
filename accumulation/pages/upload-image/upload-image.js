@@ -1,9 +1,5 @@
-// pages/upload-image/upload-image.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     my_heigth: '',
     my_s_heigth: '',

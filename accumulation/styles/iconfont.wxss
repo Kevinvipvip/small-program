@@ -7,7 +7,6 @@
   url('//at.alicdn.com/t/font_1206762_bsi7rgl45st.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_1206762_bsi7rgl45st.svg#iconfont') format('svg');
 }
-
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;

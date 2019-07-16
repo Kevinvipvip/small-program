@@ -1,6 +1,1 @@
-<!-- <view class='hexagon'>
-  个
-</view>
-
-<view class='aaa'></view> -->
-<map longitude='{{longitude}}' latitude='{{latitude}}' scale='18' markers='{{markers}}'></map>
+<text>测试页面</text>

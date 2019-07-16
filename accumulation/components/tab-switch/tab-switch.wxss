@@ -1,4 +1,8 @@
-@import "iconfont.wxss";
+/*
+*组件要使用全局样式
+*必须把app.wxss引入进来
+*/
+@import '../../app.wxss';
 
 .tab-switch {
   position: relative;

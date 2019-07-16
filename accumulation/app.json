@@ -1,17 +1,18 @@
 {
 	"pages": [
-		"pages/index/index",
 		"pages/accumulation/accumulation",
+		"pages/index/index",
 		"pages/mine/mine",
 		"pages/upload-image/upload-image",
 		"pages/tab/tab",
+		"pages/location/location",
 		"pages/publish-house/publish-house",
 		"pages/test/test"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#333333",
-		"navigationBarTitleText": "首页",
+		"navigationBarTitleText": "陆剑客",
 		"navigationBarTextStyle": "white"
 	},
 	"tabBar": {

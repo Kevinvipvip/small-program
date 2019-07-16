@@ -1,9 +1,6 @@
-// pages/publish-house/publish-house.js
-Page({
+const utils = require('../../utils/util');
 
-  /**
-   * 页面的初始数据
-   */
+Page({
   data: {
     height: '', //上传图片的显示框的高度
 
@@ -69,11 +66,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
-    this.getDate((res) => {
-      console.log(res)
-      console.log(res.startDate)
-      console.log(res.endDate)
+  onLoad: function () {
+    utils.getDate((res) => {
+      // console.log(res)
+      // console.log(res.startDate)
+      // console.log(res.endDate)
       this.setData({
         startDate: res.startDate,
         endDate: res.endDate
@@ -90,28 +87,28 @@ Page({
     var query = wx.createSelectorQuery();
     //选择id
     var that = this;
-    query.select('.up-image-cont').boundingClientRect(function(rect) {
-      console.log(rect.width)
+    query.select('.up-image-cont').boundingClientRect(function (rect) {
+      // console.log(rect.width)
       that.setData({
         height: rect.width + 'px'
       })
     }).exec();
   },
-  bindMultiPickerChange: function(e) {
+  bindMultiPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       multiIndex: e.detail.value
     })
   },
 
-  bindMultiPickerColumnChange: function(e) {
+  bindMultiPickerColumnChange: function (e) {
     console.log('修改的列为', e.detail.column, '，值为', e.detail.value);
     this.data.multiIndex[e.detail.column] = e.detail.value;
     this.setData({
       multiIndex: this.data.multiIndex
     })
   },
-  bindDateChange: function(e) {
+  bindDateChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       changeColor: true,
@@ -150,7 +147,7 @@ Page({
   },
   //点击触发上传事件
   upLoadImage() {
-    this.uploadImages((res) => {
+    utils.uploadImages((res) => {
       this.setData({
         houseImg: res
       })
@@ -158,14 +155,14 @@ Page({
 
   },
   upLoadProveImage() {
-    this.uploadImages((res) => {
+    utils.uploadImages((res) => {
       this.setData({
         proveImg: res
       })
     })
   },
   // form表单提交事件
-  formSubmit: function(e) {
+  formSubmit: function (e) {
     console.log('form提交的数据', e.detail.value)
   },
 
@@ -177,101 +174,23 @@ Page({
     })
   },
   /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
-  },
-
-  /**
-   * 提取出来的公共方法
-   */
-  //获取当天日期
-  getDate(fn) {
-    let timestamp = Date.parse(new Date());
-    let date = new Date(timestamp);
-    //获取年份  
-    let Y = date.getFullYear();
-    //获取月份  
-    let M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
-    let endM = (date.getMonth() + 2 < 10 ? '0' + (date.getMonth() + 2) : date.getMonth() + 2);
-    //获取当日日期 
-    let D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
-    let startDate = Y + '-' + M + '-' + D
-    let endDate = Y + '-' + endM + '-' + D
-    let finishDate = {
-      startDate,
-      endDate
-    }
-    fn(finishDate)
-  },
-  // 上传图片
-  uploadImages(fn) {
-    wx.chooseImage({
-      count: 9,
-      sourceType: ['album', 'camera'],
-      success: function(res) {
-        console.log(res.tempFiles)
-        for (let i = 0; i < res.tempFiles.length; i++) {
-          if (res.tempFiles[i].size > 512000) {
-            wx.showToast({
-              title: '请上传小于1M的照片',
-              icon: 'none'
-            });
-            return;
-          }
-        }
-        if (res.tempFiles.length < 3) {
-          wx.showToast({
-            title: '请上传不少于3张照片',
-            icon: 'none'
-          });
-        } else {
-          fn(res.tempFiles)
-        }
-      },
-    })
   }
-})
+});
