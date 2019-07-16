@@ -1,18 +1,18 @@
 {
 	"pages": [
-		"pages/accumulation/accumulation",
 		"pages/index/index",
-		"pages/mine/mine",
-		"pages/upload-image/upload-image",
-		"pages/tab/tab",
+		"pages/accumulation/accumulation",
+		"pages/test/test",
 		"pages/location/location",
+		"pages/tab/tab",
 		"pages/publish-house/publish-house",
-		"pages/test/test"
+		"pages/upload-image/upload-image",
+		"pages/mine/mine"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#333333",
-		"navigationBarTitleText": "陆剑客",
+		"navigationBarTitleText": "剑过留痕",
 		"navigationBarTextStyle": "white"
 	},
 	"tabBar": {

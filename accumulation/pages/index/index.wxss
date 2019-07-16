@@ -1,0 +1,14 @@
+.my-swiper {
+    height: 350rpx;
+    width: 100%;
+}
+
+.custom-swiper {
+    height: 100%;
+    width: 100%;
+}
+.custom-swiper image{
+    width: 100%;
+    height: 100%;
+    display: block;
+}

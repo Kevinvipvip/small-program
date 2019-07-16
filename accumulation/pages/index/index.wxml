@@ -1,1 +1,15 @@
-<view>首页</view>
+<view class="container">
+  <view class="my-swiper">
+    <swiper
+            class="custom-swiper"
+            autoplay="{{true}}"
+            circular="{{true}}">
+      <block wx:for="{{mine_img}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" mode="aspectFill"></image>
+        </swiper-item>
+      </block>
+
+    </swiper>
+  </view>
+</view>
