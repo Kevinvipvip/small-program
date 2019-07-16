@@ -1,8 +1,9 @@
 {
 	"pages": [
-		"pages/mine/mine",
-		"pages/accumulation/accumulation",
 		"pages/index/index",
+		"pages/accumulation/accumulation",
+		"pages/mine/mine",
+		"pages/upload-image/upload-image",
 		"pages/tab/tab",
 		"pages/publish-house/publish-house",
 		"pages/test/test"
@@ -41,5 +42,10 @@
 	"sitemapLocation": "sitemap.json",
 	"navigateToMiniProgramAppIdList": [
 		"wx50f030c7f4a897ff"
-	]
+	],
+	"permission": {
+		"scope.userLocation": {
+			"desc": "你的位置信息将用于小程序位置接口的效果展示"
+		}
+	}
 }

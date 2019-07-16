@@ -54,3 +54,12 @@
   border-right: 50rpx solid transparent;
   border-top: 25rpx solid #70ac2e;
 }
+map{
+	position: fixed;
+	top:0;
+	left: 0;
+	right:0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}

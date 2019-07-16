@@ -5,14 +5,39 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		textString:String
+		longitude:0,
+		latitude:0,
+		markers: [{
+			longitude: 0,
+			latitude: 0,
+			width: 30,
+			height: 30,
+			iconPath: '/images/position-icon.png'
+		}]
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
+		let that = this
+		wx.getLocation({
+			type: 'wgs84',
+			success(res) {
+				const latitude = res.latitude
+				const longitude = res.longitude
+				const speed = res.speed
+				const accuracy = res.accuracy
+				that.data.markers[0].latitude = res.latitude
+				that.data.markers[0].longitude = res.longitude
 
+				that.setData({
+					longitude: res.longitude,
+					latitude: res.latitude,
+					markers: that.data.markers
+				})
+			}
+		})
 	},
 
 	/**
