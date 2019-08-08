@@ -1,3 +1,7 @@
+.upload-cont .title{
+    font-size: 35rpx;
+    margin: 10rpx 25rpx;
+}
 .upload-img {
     display: flex;
     justify-content: flex-start;

@@ -4,10 +4,10 @@
     font-weight: bold;
     line-height: 70rpx;
 }
-.test-cont{
+.count-down{
     font-size: 30rpx;
     margin: 25rpx;
 }
-.test-cont text{
+.count-down text{
     margin: 0 5rpx;
 }

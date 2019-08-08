@@ -1,9 +1,6 @@
 <view class="container">
-  <view class="title">测试</view>
-  <view class="test-cont">
-    <button bindtap="btn_test">测试按钮</button>
-  </view>
-  <view class="test-cont">
+  <view class="title">节假日倒计时</view>
+  <view class="count-down">
     <text>距离春节还有：</text>
     <text>{{spring[0]}}</text>
     <text>天</text>
@@ -14,7 +11,7 @@
     <text>{{spring[3]}}</text>
     <text>秒</text>
   </view>
-  <view class="test-cont">
+  <view class="count-down">
     <text>距离七夕还有：</text>
     <text>{{valentine[0]}}</text>
     <text>天</text>
@@ -25,7 +22,7 @@
     <text>{{valentine[3]}}</text>
     <text>秒</text>
   </view>
-  <view class="test-cont">
+  <view class="count-down">
     <text>距离中秋节还有：</text>
     <text>{{mid_autumn[0]}}</text>
     <text>天</text>
@@ -36,7 +33,7 @@
     <text>{{mid_autumn[3]}}</text>
     <text>秒</text>
   </view>
-  <view class="test-cont">
+  <view class="count-down">
     <text>距离国庆节还有：</text>
     <text>{{national[0]}}</text>
     <text>天</text>

@@ -54,13 +54,6 @@ Page({
       });
     }, 1000);
   },
-
-  //点击测试按钮事件
-  btn_test() {
-    utils.modal('测试弹出', () => {
-      console.log(111)
-    })
-  },
   countDownDate(timeStamp, fn, callback) {
     let time_stamp = timeStamp.toString()[12] ? timeStamp : timeStamp * 1000;
     let now_time_stamp = new Date().getTime();//获取现在距离1970年的毫秒数
@@ -78,7 +71,11 @@ Page({
       fn(new_date)
     } else {
       if (callback) {
-        utils.toast('已结束');
+        wx.showToast({
+          title: '已结束',
+          icon: 'none',
+          duration: 2000
+        });
         callback()
       }
     }

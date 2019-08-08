@@ -5,8 +5,9 @@
 		"pages/test/test",
 		"pages/location/location",
 		"pages/tab/tab",
-		"pages/publish-house/publish-house",
+		"pages/count-down/count-down",
 		"pages/upload-image/upload-image",
+		"pages/publish-house/publish-house",
 		"pages/mine/mine"
 	],
 	"window": {

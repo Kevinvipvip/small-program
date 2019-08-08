@@ -1,9 +1,10 @@
 <view class="container">
+  <view class="header" style="background-image: url('{{bg_img}}')" animation="{{animationData}}">
+    <text>人生就是一场修行，</text>
+    <text>我们都在这浊世之中争渡。</text>
+  </view>
   <view class="my-swiper">
-    <swiper
-            class="custom-swiper"
-            autoplay="{{true}}"
-            circular="{{true}}">
+    <swiper class="custom-swiper" autoplay="{{true}}" circular="{{true}}">
       <block wx:for="{{mine_img}}" wx:key="index">
         <swiper-item>
           <image src="{{item}}" mode="aspectFill"></image>

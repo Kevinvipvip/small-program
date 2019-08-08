@@ -69,8 +69,48 @@ const uploadImages = fn => {
   })
 };
 
+const toast = (title, duration, icon = 'none') => {
+  let dura = duration || 2000;
+  wx.showToast({
+    title: title,
+    icon: icon,
+    duration: dura
+  })
+};
+
+const modal = (message, callback) => {
+  wx.showModal({
+    title: '',
+    content: message,
+    showCancel: false,
+    success() {
+      if (callback) {
+        callback()
+      }
+    }
+  })
+};
+
+const getCloudImage = (fileList, success, fail) => {
+  wx.cloud.getTempFileURL({
+    fileList: fileList,
+    success: (res) => {
+      if (success) {
+        success(res.fileList)
+      }
+    },
+    fail: () => {
+      if (fail) {
+        fail()
+      }
+    }
+  })
+};
 module.exports = {
   formatTime: formatTime,
   getDate: getDate,
-  uploadImages: uploadImages
+  uploadImages: uploadImages,
+  toast: toast,
+  modal: modal,
+  getCloudImage: getCloudImage
 };

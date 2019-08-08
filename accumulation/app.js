@@ -1,6 +1,12 @@
 App({
 
-  
+  onLaunch() {
+    wx.cloud.init({
+      env: 'grj18776554629',
+      traceUser: true
+    })
+  },
+
   config: {
     url: 'http://www.jd.com',
     api: ''
@@ -21,13 +27,17 @@ App({
       link: '/pages/tab/tab',
       color: '#ff4c4c'
     }, {
+      name: '倒计时',
+      link: '/pages/count-down/count-down',
+      color: '#333333'
+    }, {
       name: '房源发布',
       link: '/pages/publish-house/publish-house',
-      color: '#333333'
+      color: '#ff4c4c'
     }, {
       name: '上传图片',
       link: '/pages/upload-image/upload-image',
-      color: '#ff4c4c'
+      color: '#333333'
     }]
   }
 });
