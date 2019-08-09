@@ -27,7 +27,8 @@ Page({
       'cloud://grj18776554629.6772-grj18776554629/swipers/1.jpg',
       'cloud://grj18776554629.6772-grj18776554629/swipers/2.jpg',
       'cloud://grj18776554629.6772-grj18776554629/swipers/3.jpg',
-      'cloud://grj18776554629.6772-grj18776554629/swipers/4.jpg'];
+      'cloud://grj18776554629.6772-grj18776554629/swipers/4.jpg'
+    ];
     utils.getCloudImage(swiper_img, (res) => {
       let new_swiper = [];
       for (let i = 0; i < res.length; i++) {
@@ -65,10 +66,12 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 点击图片查看大图
+  openImage(e) {
+    let index = e.currentTarget.dataset.index;
+    wx.previewImage({
+      urls: this.data.mine_img,
+      current: this.data.mine_img[index]
+    })
   }
 });
