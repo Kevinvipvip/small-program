@@ -1,17 +1,22 @@
+const Bmob = require('/utils/Bmob-2.1.0.min.js');
+
 App({
 
   onLaunch() {
     wx.cloud.init({
       env: 'grj18776554629',
       traceUser: true
-    })
+    });
+
+    // Bmob数据库初始化
+    Bmob.initialize("4820b283f8489834", "GRJ526");
+    // this.Bmob_add('slide_image', { name: '陆剑客', age: 23 })
   },
 
   config: {
     url: 'http://www.jd.com',
     api: ''
   },
-
 
   data: {
     linkData: [{
@@ -40,4 +45,5 @@ App({
       color: '#333333'
     }]
   }
-});
+})
+;
