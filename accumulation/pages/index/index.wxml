@@ -13,4 +13,5 @@
 
     </swiper>
   </view>
+	<button bindtap="removeSaveFile">清空文件缓存</button>
 </view>

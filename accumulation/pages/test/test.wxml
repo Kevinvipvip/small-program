@@ -1,1 +1,4 @@
-<video src="{{src}}"   controls ></video>
+<!-- <video src="{{src}}"   controls ></video> -->
+<image src="http://qn.jianghairui.com/a.JPG"></image>
+<image src="http://qn.jianghairui.com/10.jpg"></image>
+<image src="http://qiniu.wcip.net/upload/funding/156757687021416800328.jpg"></image>

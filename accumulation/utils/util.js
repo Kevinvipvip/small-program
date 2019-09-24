@@ -109,21 +109,7 @@ const getCloudImage = (fileList, success, fail) => {
 
 // 在Bmob中新增一条数据
 const Bmob_add = (tableName, data, succ) => {
-  const query = Bmob.Query(tableName);
-  for (let k in data) {
-    // console.log(k, data[k]);
-    query.set(k, data[k]);
 
-  }
-  query.save().then(res => {
-    modal('数据添加成功', () => {
-      if (succ) {
-        succ();
-      }
-    })
-  }).catch(err => {
-    console.log(err)
-  })
 };
 
 module.exports = {

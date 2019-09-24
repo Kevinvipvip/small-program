@@ -1,5 +1,3 @@
-const Bmob = require('/utils/Bmob-2.1.0.min.js');
-
 App({
 
   onLaunch() {
@@ -7,15 +5,32 @@ App({
       env: 'grj18776554629',
       traceUser: true
     });
-
-    // Bmob数据库初始化
-    Bmob.initialize("4820b283f8489834", "GRJ526");
-    // this.Bmob_add('slide_image', { name: '陆剑客', age: 23 })
   },
-
   config: {
     url: 'http://www.jd.com',
     api: ''
+  },
+
+  cloud_ajax(name, data, succ, fail, complete) {
+    // let d = data || {};
+    wx.cloud.callFunction({
+      name: name,
+      data: data,
+      success: res => {
+				// console.log(res)
+        succ(res.result);
+      },
+      fail: err => {
+        if (fail) {
+          fail();
+        }
+      },
+      complete: () => {
+        if (complete) {
+          complete();
+        }
+      }
+    })
   },
 
   data: {
@@ -43,7 +58,10 @@ App({
       name: '上传图片',
       link: '/pages/upload-image/upload-image',
       color: '#333333'
+    }, {
+      name: '授权登录',
+      link: '/pages/auth/auth',
+      color: '#ff4c4c'
     }]
   }
-})
-;
+});

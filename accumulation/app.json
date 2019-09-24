@@ -8,6 +8,7 @@
 		"pages/count-down/count-down",
 		"pages/upload-image/upload-image",
 		"pages/publish-house/publish-house",
+		"pages/auth/auth",
 		"pages/mine/mine"
 	],
 	"window": {

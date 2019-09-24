@@ -1,0 +1,8 @@
+<view class="container">
+  <view class='auth-cont' wx:if='{{isAuth}}'>
+    <image src="{{user_detail.avatar}}" mode="widthFix"></image>
+    <text>{{user_detail.nickname}}</text>
+  </view>
+  <button wx:else bindgetuserinfo="getUserInfo" open-type="getUserInfo">点击授权</button>
+  <!-- <button bindgetuserinfo="getUserInfo" open-type="getUserInfo">点击授权</button> -->
+</view>

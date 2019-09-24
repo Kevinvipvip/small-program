@@ -1,0 +1,4 @@
+.auth-cont image {
+  width: 200rpx;
+  display: block;
+}

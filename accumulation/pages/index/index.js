@@ -37,7 +37,26 @@ Page({
       this.setData({
         mine_img: new_swiper
       })
-    })
+    });
+
+    // 调用小程序云函数
+    // wx.cloud.callFunction({
+    //   name: 'test'
+    // }).then(res => {
+    //   console.log(res);
+    // }).catch(err => {
+    //   console.log(err);
+    // // // })
+    // wx.cloud.callFunction({
+    //   name: 'getUserInfo',
+    //   complete: res => {
+    //     console.log(res)
+    //     let getData = res.result.data
+    //     console.log(getData);
+    //   }
+    // })
+
+
   },
   onShow() {
     if (!this.data.first) {
@@ -52,17 +71,40 @@ Page({
     });
   },
 
+  removeSaveFile() {
+    wx.getSavedFileList({
+      success: (res) => {
+        console.log(res);
+        if (res.fileList.length > 0) {
+          for (let i = 0; i < res.fileList.length; i++) {
+            wx.removeSavedFile({
+              filePath: res.fileList[i].filePath,
+              complete(res) {
+                wx.showModal({
+                  title: '',
+                  content: '清空文件缓存成功',
+                  showCancel: false
+                })
+              }
+            })
+          }
+
+        }
+      }
+    });
+  },
+
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
