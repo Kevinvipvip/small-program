@@ -21,9 +21,9 @@ Page({
         clearInterval(count_down);
       });
     }, 1000);
-    // 情人节倒计时
+    // 圣诞节倒计时
     let valentine = setInterval(() => {
-      this.countDownDate(1565107200000, (res) => {
+			this.countDownDate(1577203200000, (res) => {
         this.setData({
           valentine: res
         });
@@ -32,9 +32,9 @@ Page({
       });
     }, 1000);
 
-    // 中秋节倒计时
+    // 2020年元旦倒计时
     let mid_autumn = setInterval(() => {
-      this.countDownDate(1568304000000, (res) => {
+			this.countDownDate(1577808000000, (res) => {
         this.setData({
           mid_autumn: res
         });
@@ -43,9 +43,9 @@ Page({
       });
     }, 1000);
 
-    // 国庆节倒计时
+    // 小年倒计时
     let national = setInterval(() => {
-      this.countDownDate(1569859200000, (res) => {
+			this.countDownDate(1579190400000, (res) => {
         this.setData({
           national: res
         });

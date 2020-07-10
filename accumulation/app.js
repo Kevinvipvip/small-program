@@ -17,7 +17,7 @@ App({
       name: name,
       data: data,
       success: res => {
-				// console.log(res)
+				console.log(res)
         succ(res.result);
       },
       fail: err => {

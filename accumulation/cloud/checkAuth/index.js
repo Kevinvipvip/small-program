@@ -1,4 +1,6 @@
-// 云函数入口文件
+/** checkAuth 云函数入口文件
+ * 返回数据格式:code：1  状态；data:{}||[] 返回的数据内容；msg:'' 提示内容
+ **/
 const cloud = require('wx-server-sdk')
 
 cloud.init({

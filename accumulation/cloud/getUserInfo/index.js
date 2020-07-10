@@ -1,4 +1,4 @@
-/**云函数入口文件
+/** getUserInfo 云函数入口文件
  * 返回数据格式:code：1  状态；data:{}||[] 返回的数据内容；msg:'' 提示内容
  **/
 const cloud = require('wx-server-sdk')
@@ -23,7 +23,7 @@ exports.main = async(event, context) => {
     code: 1,
     data: {
       id: user_list._id,
-			nickname: user_list.nickName,
+      nickname: user_list.nickName,
       gender: user_list.gender,
       avatar: user_list.avatarUrl
     },

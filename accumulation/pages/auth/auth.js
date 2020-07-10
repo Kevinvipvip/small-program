@@ -5,7 +5,7 @@ Page({
     isAuth: true,
     user_detail: {}
   },
-  onLoad: function(options) {
+  onLoad: function (options) {
     // app.cloud_ajax('login', {}, (res) => {
     //   console.log(res)
     // })
@@ -31,6 +31,7 @@ Page({
     })
   },
   getUserInfo(e) {
+    let that = this;
     console.log(e.detail.userInfo)
     app.cloud_ajax('login', {
       avatarUrl: e.detail.userInfo.avatarUrl,
@@ -38,57 +39,66 @@ Page({
       nickName: e.detail.userInfo.nickName,
     }, (res) => {
       console.log(res)
-      this.setData({
-        isAuth: true
+      // utils.toast(res.data);
+      that.data.user_detail = {
+        // id: res._id,
+        nickname: e.detail.userInfo.nickName,
+        gender: e.detail.userInfo.gender,
+        avatar: e.detail.userInfo.avatarUrl
+      };
+      that.setData({
+        isAuth: true,
+        user_detail: that.data.user_detail
       })
+    }, (fail) => {
     })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })

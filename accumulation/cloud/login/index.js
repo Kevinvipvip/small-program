@@ -1,4 +1,4 @@
-/**云函数入口文件
+/** login 云函数入口文件
  * 返回数据格式:code：1  状态；data:{}||[] 返回的数据内容；msg:'' 提示内容
  * 需要传参： avatarUrl（头像链接）；gender（性别）{1:男性；2:女性；0:保密}；nickName（昵称）
  **/
@@ -44,7 +44,7 @@ exports.main = async(event, context) => {
     }).then((res) => {
       return {
         code: 1,
-        data: res,
+        data: '授权成功',
         msg: '成功'
       }
     }, (fail) => {

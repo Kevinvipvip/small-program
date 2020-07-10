@@ -1,18 +1,7 @@
 <view class="container">
   <view class="title">节假日倒计时</view>
   <view class="count-down">
-    <text>距离春节还有：</text>
-    <text>{{spring[0]}}</text>
-    <text>天</text>
-    <text>{{spring[1]}}</text>
-    <text>时</text>
-    <text>{{spring[2]}}</text>
-    <text>分</text>
-    <text>{{spring[3]}}</text>
-    <text>秒</text>
-  </view>
-  <view class="count-down">
-    <text>距离七夕还有：</text>
+    <text>距离圣诞节还有：</text>
     <text>{{valentine[0]}}</text>
     <text>天</text>
     <text>{{valentine[1]}}</text>
@@ -23,7 +12,7 @@
     <text>秒</text>
   </view>
   <view class="count-down">
-    <text>距离中秋节还有：</text>
+    <text>距离2020年元旦还有：</text>
     <text>{{mid_autumn[0]}}</text>
     <text>天</text>
     <text>{{mid_autumn[1]}}</text>
@@ -34,7 +23,7 @@
     <text>秒</text>
   </view>
   <view class="count-down">
-    <text>距离国庆节还有：</text>
+    <text>距离小年还有：</text>
     <text>{{national[0]}}</text>
     <text>天</text>
     <text>{{national[1]}}</text>
@@ -42,6 +31,17 @@
     <text>{{national[2]}}</text>
     <text>分</text>
     <text>{{national[3]}}</text>
+    <text>秒</text>
+  </view>
+  <view class="count-down">
+    <text>距离春节还有：</text>
+    <text>{{spring[0]}}</text>
+    <text>天</text>
+    <text>{{spring[1]}}</text>
+    <text>时</text>
+    <text>{{spring[2]}}</text>
+    <text>分</text>
+    <text>{{spring[3]}}</text>
     <text>秒</text>
   </view>
 </view>
